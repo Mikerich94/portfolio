@@ -21,12 +21,12 @@
 
 </div>
 
-<div class="about">
+<div class="section about">
     <div class="container">
 <h2> About Me</h2>
 <p> As a web developer, I'm always looking for new techniques to modernize websites. I've worked at Ironpaper for a few years...</p>
 
-<div class="expertise-cards">
+<div class="section expertise-cards">
     <div class="container">
 
 <h2>
@@ -64,7 +64,7 @@ Things I focus on:</h2>
 </div>
 </div>
 
-<div class="languages">
+<div class="section languages">
     <div class="container">
 <h2> Language specialization:</h2>
 <ul>
@@ -77,7 +77,7 @@ Things I focus on:</h2>
 </div>
 
 
-<div class="project-section">
+<div class="section projects">
     <div class="container">
     <div class="two-col kami">
         <img width="500" height="500" src="https://github.com/Mikerich94/portfolio/blob/main/coding%20image.png?raw=true">
@@ -109,7 +109,7 @@ Things I focus on:</h2>
     </div>
 </div>
     </div>
-<div class="contact-section">
+<div class="section contact">
     <div class="container">
         <h2> Contact Me</h2>
         <p> form goes here</p>
@@ -151,9 +151,18 @@ Things I focus on:</h2>
  .two-col {
     display:flex;
     gap:50px;
+    align-items:center;
     justify-content:center;
  }
  .two-col img, .two-col .description {
     flex-basis:50%;
+ }
+
+ .section {
+    padding:75px 0;
+ }
+
+ .section:nth-child(odd) {
+    background:#1f1f1f;
  }
 </style>
