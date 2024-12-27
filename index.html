@@ -5,10 +5,71 @@
 <body>
 <div class="hero-container">
     <div class="container">
-        <h1>Welcome to my portfolio site. </h1>
-        <h3> Here's where I will show off my coding projects.</h3>
+        <div class="hero-row">
+<div class="hero-text">
+    <h1>Welcome to my portfolio site. </h1>
+    <h3> Here's where I will show off my coding projects.</h3>
+</div>
+<div class="hero-img">
+    <img src="https://github.com/Mikerich94/portfolio/blob/main/coding%20image.png?raw=true">
+</div>
+        </div>
+       
     </div>
     
 
 </div>
+
+<div class="about">
+<h2> About Me</h2>
+<p> As a web developer, I'm always looking for new techniques to modernize websites. I've worked at Ironpaper for a few years...</p>
+
+<ul>
+Things I focus on:
+<li>
+   <strong>Page Speed Optimization-</strong> Websites that load slower not only frustrate users but also rank lower in Gooogle's algorithm.
+</li>
+<li><strong>Modern Animations:</strong> Outdated looking websites won't impress potential customers.</li>
+</ul>
+</div>
+
+<div class="site-tiles">
+    <div class="site-tile">
+        Website 1
+    </div>
+    <div class="site-tile">
+        Website 2
+    </div>
+    <div class="site-tile">
+        Website 3
+    </div>
+    <div class="site-tile">
+        Website 4
+    </div>
+</div>
 </body>
+
+<style>
+.hero-row {
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    align-items:center;
+}
+.hero-img img {
+    max-width:500px;
+}
+ 
+ .site-tiles {
+    padding:100px 0;
+    display:flex;
+    justify-content:center;
+    gap:50px;
+ }
+
+ .site-tile {
+    padding:50px;
+    border: 1px solid black;
+    border-radius:20px;
+ }
+</style>
