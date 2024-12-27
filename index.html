@@ -28,6 +28,7 @@
 
 <h2>
 Things I focus on:</h2>
+<div class="card-row">
     <div class="card">
   <img width="25" height="25" src="https://github.com/Mikerich94/portfolio/blob/main/page%20speed%20icon.png?raw=true"><h4>Page Speed Optimization-</h4> 
   <p>Websites that load slower not only frustrate users but also rank lower in Gooogle's algorithm.</p>
@@ -42,7 +43,7 @@ Things I focus on:</h2>
     <h4>Modern Animations</h4>
     <p>Outdated looking websites won't impress potential customers.</p>
   </div>
-
+</div>
 <h3>Languages</h3>
 <ul>
     <li>HTML</li>
@@ -106,5 +107,17 @@ Things I focus on:</h2>
     padding:50px;
     border: 1px solid black;
     border-radius:20px;
+ }
+
+ .card-row {
+    display:flex;
+    gap:50px;
+ }
+
+ .card-row .card {
+    padding:50px;
+    background:white;
+    border-radius:20px;
+    border: 1px solid black;
  }
 </style>
