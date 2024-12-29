@@ -133,7 +133,26 @@
             </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script>
+            // Ensure the DOM is ready before running the GSAP animation
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all the cards within the .card-row
+  const cards = document.querySelectorAll('.card-row .card');
 
+  // Use GSAP to fade in the cards one by one
+  gsap.fromTo(cards, 
+    { opacity: 0 }, // starting state: fully transparent
+    { 
+      opacity: 1, // end state: fully opaque
+      duration: 1, // animation duration for each card
+      stagger: 0.3, // delay between each card's animation
+      ease: "power1.out" // easing effect for smooth transition
+    }
+  );
+});
+
+        </script>
 </body>
 
 <style>
