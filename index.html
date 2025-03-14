@@ -74,16 +74,16 @@
             <h2> Language specialization:</h2>
 
                 <div class="language-card-row">
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/html.png?raw=true');background-repeat:no-repeat;max-width:75px;max-height:75px;object-fit:cover;">
+                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/html.png?raw=true');">
 
                     </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/css-icon.png?raw=true');background-repeat:no-repeat;max-width:75px;max-height:75px;object-fit:cover;">
+                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/css-icon.png?raw=true');">
 
                     </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/javascript.png?raw=true');background-repeat:no-repeat;max-width:75px;max-height:75px;object-fit:cover;">
+                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/javascript.png?raw=true');">
 
                     </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/php-icon.png?raw=true');background-repeat:no-repeat;max-width:75px;max-height:75px;object-fit:cover;">
+                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/php-icon.png?raw=true');">
 
                     </div>
                 </div>
@@ -244,4 +244,22 @@
     .section:nth-child(even) {
         background: #fff;
     }
+.language-card-row {
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.language-card {
+    background-repeat: no-repeat;
+    background-size: contain;  /* Ensures the whole image fits */
+    background-position: center;
+    width: 75px;  /* Fixed width */
+    height: 75px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
 </style>
