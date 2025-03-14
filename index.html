@@ -71,29 +71,13 @@
 
     <div class="section languages">
         <div class="container">
-            <h2> Language specialization:</h2>
-
-                <div class="language-card-row">
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/html.png?raw=true');">
-
-                    </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/css-icon.png?raw=true');">
-
-                    </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/javascript.png?raw=true');">
-
-                    </div>
-                    <div class="language-card" style="background-image:url('https://github.com/Mikerich94/portfolio/blob/main/php-icon.png?raw=true');">
-
-                    </div>
-                </div>
-
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>PhP</li>
-            </ul>
+            <h2 class="language-card-title">Language specialization:</h2>
+            <div class="language-card-row">
+                <img class="language-card" src="https://github.com/Mikerich94/portfolio/blob/main/html.png?raw=true" alt="HTML">
+                <img class="language-card" src="https://github.com/Mikerich94/portfolio/blob/main/css-icon.png?raw=true" alt="CSS">
+                <img class="language-card" src="https://github.com/Mikerich94/portfolio/blob/main/javascript.png?raw=true" alt="JavaScript">
+                <img class="language-card" src="https://github.com/Mikerich94/portfolio/blob/main/php-icon.png?raw=true" alt="PHP">
+            </div>
         </div>
     </div>
 
@@ -140,52 +124,81 @@
     </div>
 
     <script>
-        // Ensure the DOM is ready before running the GSAP animation
+        
         document.addEventListener("DOMContentLoaded", function () {
-            // Select all the cards within the .card-row
-            const cards = document.querySelectorAll('.card-row .card');
 
-            // Use GSAP to fade in the cards one by one, with ScrollTrigger
-            gsap.fromTo(cards, 
-                { opacity: 0 }, // starting state: fully transparent
+
+            // GSAP animation for hero text 
+            gsap.fromTo('.hero-text', 
+                { opacity: 0, x: -200 }, 
                 { 
-                    opacity: 1, // end state: fully opaque
-                    duration: 1, // animation duration for each card
-                    stagger: 0.3, // delay between each card's animation
-                    ease: "power1.out", // easing effect for smooth transition
+                    opacity: 1, 
+                    x: 0, 
+                    duration: 1, 
+                    ease: "power2.out" 
+                }
+            );
+
+            // GSAP animation for hero image
+            gsap.fromTo('.hero-img', 
+                { opacity: 0, x: 200 }, 
+                { 
+                    opacity: 1, 
+                    x: 0,
+                    duration: 1,
+                    ease: "power2.out" 
+                }
+            );
+      
+
+            // GSAP animation for the language cards
+           
+            const languageCards = document.querySelectorAll('.language-card');
+
+            
+            gsap.fromTo(languageCards, 
+                { 
+                    opacity: 0 
+                }, { 
+                    opacity: 1,
+                    duration: 1,
+                    stagger: 0.3, 
+                    ease: "power1.out",
                     scrollTrigger: {
-                        trigger: '.card-row', // The element that triggers the animation
-                        start: 'top 80%', // Start when the top of the .card-row is 80% from the top of the viewport
-                        end: 'bottom 20%', // End when the bottom of the .card-row is 20% from the top of the viewport
-                        scrub: true, // Scrubs the animation (smooth transition when scrolling)
-                        once: true, // Animation occurs only once when the element is triggered
+                        trigger: '.language-card-row', 
+                        start: 'top 80%',
+                        end: 'bottom 20%',
+                        scrub: true, 
+                        once: true, 
                     }
                 }
             );
 
-            // GSAP animation for hero text (fade from left)
-            gsap.fromTo('.hero-text', 
-                { opacity: 0, x: -200 }, // Starting state: fully transparent and moved left by 200px
-                { 
-                    opacity: 1, // End state: fully opaque
-                    x: 0, // End state: back to normal position
-                    duration: 1, // animation duration
-                    ease: "power2.out" // Easing effect for smooth transition
-                }
-            );
 
-            // GSAP animation for image (fade from right)
-            gsap.fromTo('.hero-img', 
-                { opacity: 0, x: 200 }, // Starting state: fully transparent and moved right by 200px
-                { 
-                    opacity: 1, // End state: fully opaque
-                    x: 0, // End state: back to normal position
-                    duration: 1, // animation duration
-                    ease: "power2.out" // Easing effect for smooth transition
-                }
-            );
-        });
+           // GSAP animation for the focus cards
+           
+           const cards = document.querySelectorAll('.card-row .card');
+
+            
+gsap.fromTo(cards, 
+    { 
+        opacity: 0 
+    }, { 
+        opacity: 1,
+        duration: 1,
+        stagger: 0.3, 
+        ease: "power1.out",
+        scrollTrigger: {
+            trigger: '.card-row', 
+            start: 'top 80%',
+            end: 'bottom 20%',
+            scrub: true, 
+            once: true, 
+        }
+    }
+);
    
+});
     </script>
 
 </body>
@@ -244,22 +257,19 @@
     .section:nth-child(even) {
         background: #fff;
     }
-.language-card-row {
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    flex-wrap:wrap;
+    .language-card-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .language-card {
-    background-repeat: no-repeat;
-    background-size: contain;  /* Ensures the whole image fits */
-    background-position: center;
-    width: 75px;  /* Fixed width */
-    height: 75px; /* Fixed height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 75px;
+    height: 75px;
+    object-fit: contain; /* Ensures the entire image fits without cropping */
 }
-    
+    .language-card-title {
+        text-align:center;
+    }
 </style>
