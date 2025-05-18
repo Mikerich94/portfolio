@@ -220,6 +220,26 @@ gsap.fromTo(cards,
 </body>
 
 <style>
+
+  .hero-img {
+  position: relative;
+  overflow: hidden;
+  height: 500px; /* adjust as needed */
+}
+
+.parallax-img-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
     * {
         font-family: montserrat, sans-serif;
     }
