@@ -7,24 +7,25 @@
 </head>
 
 <body>
+<div class="hero-container">
+  <!-- Place the image ABOVE the container for full background coverage -->
+  <div class="hero-img">
+    <div class="parallax-img-container">
+      <img class="parallax-img" src="https://github.com/Mikerich94/portfolio/blob/main/coding%20image.png?raw=true" />
+    </div>
+  </div>
 
-    <div class="hero-container">
-        <div class="container">
-          <div class="hero-img">
-  <div class="parallax-img-container">
-    <img class="parallax-img" src="https://github.com/Mikerich94/portfolio/blob/main/coding%20image.png?raw=true" />
+  <!-- Content container stays inside -->
+  <div class="container">
+    <div class="hero-row">
+      <div class="hero-text">
+        <h1>Welcome to my portfolio site.</h1>
+        <h3>Here's where I will show off my coding projects.</h3>
+        <h4>LinkedIn section</h4>
+      </div>
+    </div>
   </div>
 </div>
-            <div class="hero-row">
-                <div class="hero-text">
-                    <h1>Welcome to my portfolio site. </h1>
-                    <h3> Here's where I will show off my coding projects.</h3>
-                    <h4>LinkedIn section</h4>
-                </div>
-             
-            </div>
-        </div>
-    </div>
 
     <div class="section about">
       <div class="container">
@@ -219,12 +220,22 @@ gsap.fromTo(cards,
 
 <style>
 
-  .hero-img {
+  .hero-container {
   position: relative;
   overflow: hidden;
-  height: 500px; /* adjust as needed */
-}
+  }
 
+  
+
+  .hero-img {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;* adjust as needed */
+}
 .parallax-img-container {
   height: 100%;
   overflow: hidden;
@@ -236,7 +247,15 @@ gsap.fromTo(cards,
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   will-change: transform;
+}
+
+/* Ensure content appears above the background image */
+.hero-container .container,
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
     * {
         font-family: montserrat, sans-serif;
