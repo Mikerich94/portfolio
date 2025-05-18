@@ -10,6 +10,11 @@
 
     <div class="hero-container">
         <div class="container">
+          <div class="hero-img">
+  <div class="parallax-img-container">
+    <img class="parallax-img" src="https://github.com/Mikerich94/portfolio/blob/main/coding%20image.png?raw=true" />
+  </div>
+</div>
             <div class="hero-row">
                 <div class="hero-text">
                     <h1>Welcome to my portfolio site. </h1>
@@ -127,7 +132,18 @@
         
         document.addEventListener("DOMContentLoaded", function () {
 
+gsap.registerPlugin(ScrollTrigger);
 
+gsap.to(".parallax-img", {
+  yPercent: 20, // or -20 to move up
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero-container",
+    start: "top bottom",   // when top of hero hits bottom of viewport
+    end: "bottom top",     // when bottom of hero hits top of viewport
+    scrub: true            // smooth scrub based on scroll position
+  }
+});
             // GSAP animation for hero text 
             gsap.fromTo('.hero-text', 
                 { opacity: 0, x: -200 }, 
