@@ -1,7 +1,9 @@
 html, body {
   scroll-behavior: smooth;
 }
-
+h1, h2, h3, h4, p, .btn, li {
+  user-select: none;
+}
 body {
     margin: 0;
 }
