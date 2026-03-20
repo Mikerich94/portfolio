@@ -27,41 +27,28 @@ body {
 
 /* Primary button (Projects) */
 .btn.projects {
-  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
-  color: white;
-  box-shadow: 0 4px 20px rgba(255, 77, 77, 0.25);
+  background: linear-gradient(135deg, #f5a623, #f7c26b);
+  color: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.35);
 }
 
 .btn.projects:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 77, 77, 0.4);
+  box-shadow: 0 8px 30px rgba(245, 166, 35, 0.5);
 }
 
 /* Secondary button (About) */
 .btn.about {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.2);
+  color: #00d4ff;
+  border: 1px solid #00d4ff;
 }
 
 .btn.about:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.4);
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00d4ff;
   transform: translateY(-2px);
-}
-
-/* Optional subtle "glow" hover effect */
-.btn::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.btn:hover::after {
-  opacity: 1;
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.2);
 }
 
 .section.hero {
