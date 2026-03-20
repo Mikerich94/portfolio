@@ -6,11 +6,10 @@ body {
     background:none!important;
     padding-top:0;
   position: relative;
+  height: 450px; 
   width: 100%;
   overflow: hidden;
   }
-
-
 
   
 h1 {
@@ -30,38 +29,32 @@ h1 {
   height: 100%;
   z-index: -1;
 }
-
-.section.about * {
-    color:#fff;
-}
-
 .parallax-img-container {
-  position: absolute; 
-  inset: 0;           
-  height: 100%;
   width: 100%;
+  height: 100%;
   overflow: hidden;
-  z-index: 0;
 }
 
 .parallax-img {
   width: 100%;
-  height: 120%;
+  height: 120%;  
   object-fit: cover;
   position: absolute;
-  top: 0;
+  top: 0;       
+  transform: none;
 }
 
-.section.about {
-  position: relative;
-  overflow: hidden;
+
+.section.hero .container {
+        display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
 }
 
-.section.about .container {
-  position: relative;
-  z-index: 2;         
+.hero-text {
+    color:#fff;
 }
-
 
 .section.hero .container, .section.hero
 .hero-text {
@@ -137,4 +130,3 @@ h1 {
     .language-card-title {
         text-align:center;
     }
-

@@ -36,11 +36,11 @@ typeTitle();
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".parallax-img", {
-  yPercent: -20,  
+  yPercent: -40,  
   scale: 1.15,
   ease: "none",
   scrollTrigger: {
-    trigger: ".section.about",
+    trigger: ".hero",
     start: "top top",
     end: "bottom top",
     scrub: 1.2
@@ -58,7 +58,7 @@ gsap.to(".parallax-img", {
             );
 
             // GSAP animation for hero image
-            gsap.fromTo('.parallax-img-container', 
+            gsap.fromTo('.hero-img', 
                 { opacity: 0, x: 200 }, 
                 { 
                     opacity: 1, 
@@ -117,4 +117,3 @@ gsap.fromTo(cards,
 );
    
 });
-
