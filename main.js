@@ -1,25 +1,12 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    //Hero typing animation
-    const titleText = "Mike Richards, web developer";
-    const subtitleText = "Intersecting modern design with high-performance, scalable web experiences.";
 
-    const titleEl = document.getElementById("title");
+    //Hero typing animation
+    const subtitleText = "Intersecting modern design with high-performance, scalable web experiences.";
     const subtitleEl = document.getElementById("subtitle");
 
-    let i = 0;
     let j = 0;
-
-    function typeTitle() {
-        if (i < titleText.length) {
-            titleEl.textContent += titleText.charAt(i);
-            i++;
-            setTimeout(typeTitle, 50);
-        } else {
-            setTimeout(typeSubtitle, 500); // wait before starting h3
-        }
-    }
 
     function typeSubtitle() {
         if (j < subtitleText.length) {
@@ -29,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    typeTitle();
+
+    typeSubtitle();
+});
 
     //GSAP 
 
