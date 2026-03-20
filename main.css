@@ -52,7 +52,7 @@ h1 {
 }
 
 
-.section.hero .container {
+.section.about .container {
         display: flex;
     align-items: center;
     height: 100%;
