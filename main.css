@@ -1,6 +1,7 @@
 
 
   .section.hero {
+    background:none;
   position: relative;
   height: 800px; 
   width: 100%;
