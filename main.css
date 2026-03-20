@@ -1,0 +1,112 @@
+
+<style>
+
+  .hero-container {
+  position: relative;
+  overflow: hidden;
+  }
+
+  
+
+  .hero-img {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;* adjust as needed */
+}
+.parallax-img-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}
+
+/* Ensure content appears above the background image */
+.hero-container .container,
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+    * {
+        font-family: montserrat, sans-serif;
+    }
+
+    .hero-row {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .hero-img img {
+        max-width: 500px;
+    }
+
+    .card-row {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .card-row .card {
+        padding: 50px;
+        max-width: 250px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid black;
+    }
+
+    .two-col {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two-col img,
+    .two-col .description {
+        flex-basis: 50%;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+    .section:nth-child(odd) {
+        background: #FAF9F6;
+    }
+
+    .section:nth-child(even) {
+        background: #fff;
+    }
+    .section h2 {
+        text-align:center;
+    }
+
+    .language-card-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.language-card {
+    width: 75px;
+    height: 75px;
+    object-fit: contain; /* Ensures the entire image fits without cropping */
+}
+    .language-card-title {
+        text-align:center;
+    }
+</style>
