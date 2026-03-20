@@ -1,5 +1,3 @@
-<script>
-
 
         
  document.addEventListener("DOMContentLoaded", function () {
@@ -118,4 +116,4 @@ gsap.fromTo(cards,
 );
    
 });
-</script>
+
