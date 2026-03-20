@@ -2,6 +2,7 @@
 
   .section.hero {
     background:none;
+    padding-top:0;
   position: relative;
   height: 800px; 
   width: 100%;

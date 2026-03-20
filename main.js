@@ -2,8 +2,8 @@
         
  document.addEventListener("DOMContentLoaded", function () {
 //Hero typing animation
-const titleText = "Welcome to my portfolio site.";
-const subtitleText = "Here's where I will show off my coding projects.";
+const titleText = "Mike Richards, web developer";
+const subtitleText = "Intersecting modern design with....";
 
 const titleEl = document.getElementById("title");
 const subtitleEl = document.getElementById("subtitle");
