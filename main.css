@@ -82,6 +82,11 @@ h4 {
     margin-top: 0;
 }
 
+p {
+    font-size:20px;
+}
+
+
 .container {
     max-width: 1312px;
     margin: 0 auto;
