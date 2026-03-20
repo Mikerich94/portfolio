@@ -36,7 +36,7 @@ typeTitle();
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".parallax-img", {
-  yPercent: -40,  
+  yPercent: -20,  
   scale: 1.15,
   ease: "none",
   scrollTrigger: {
