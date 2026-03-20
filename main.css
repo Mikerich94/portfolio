@@ -36,27 +36,30 @@ h1 {
 }
 
 .parallax-img-container {
-     position: relative;
-  height: 450px;  /* or whatever height you want */
-  overflow: hidden;
+  position: absolute; 
+  inset: 0;           
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .parallax-img {
   width: 100%;
-  height: 120%;  
+  height: 120%;
   object-fit: cover;
   position: absolute;
-  top: 0;       
-  transform: none;
+  top: 0;
 }
 
+.section.about {
+  position: relative;
+  overflow: hidden;
+}
 
 .section.about .container {
-        display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
+  position: relative;
+  z-index: 2;         
 }
 
 
