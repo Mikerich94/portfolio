@@ -196,7 +196,10 @@ p, li {
     height: 100%;
     justify-content: center;
 }
-
+#subtitle {
+  display: block;
+  min-width: max-content;
+}
 .hero-text {
     color: #fff;
     width:100%;
