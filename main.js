@@ -43,7 +43,7 @@ gsap.to(".parallax-img", {
     trigger: ".hero",
     start: "top top",
     end: "bottom top",
-    scrub: 1.5
+    scrub: 1.2
   }
 });
             // GSAP animation for hero text 
