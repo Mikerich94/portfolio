@@ -111,6 +111,18 @@ h1, h2, h3, h4 {
         border: 1px solid black;
     }
 
+    .section.projects .two-col * {
+        text-decoration:none;
+    }
+
+    .section.projects .two-col h3 {
+        cursor:pointer;
+    }
+
+      .section.projects .two-col h3:hover {
+        text-decoration:underline;
+    }
+
     .two-col {
         display: flex;
         gap: 50px;
