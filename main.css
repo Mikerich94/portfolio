@@ -10,13 +10,7 @@ body {
   overflow: hidden;
   }
 
-  .section.about {
- position: relative;
-  height: 450px;  /* or whatever height you want */
-  overflow: hidden;
-  width: 100%;
 
-  }
 
   
 h1 {
@@ -39,6 +33,13 @@ h1 {
 
 .section.about * {
     color:#fff;
+}
+
+.parallax-img-container {
+     position: relative;
+  height: 450px;  /* or whatever height you want */
+  overflow: hidden;
+  width: 100%;
 }
 
 .parallax-img {
