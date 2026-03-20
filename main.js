@@ -36,13 +36,13 @@ typeTitle();
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".parallax-img", {
-  yPercent: 20, // or -20 to move up
+  yPercent: 50, 
   ease: "none",
   scrollTrigger: {
     trigger: ".hero-container",
     start: "top bottom",   // when top of hero hits bottom of viewport
     end: "bottom top",     // when bottom of hero hits top of viewport
-    scrub: true            // smooth scrub based on scroll position
+    scrub: true           
   }
 });
             // GSAP animation for hero text 
