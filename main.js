@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //hero parallax 
 
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.normalizeScroll(false); //Prevent GSAP from messing up smooth scroll
 
     gsap.to(".parallax-img", {
         yPercent: -40,
