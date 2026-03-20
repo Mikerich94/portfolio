@@ -111,27 +111,6 @@ gsap.fromTo(
 );
 
 
-    // GSAP animation for the focus cards
 
-    const cards = document.querySelectorAll('.card-row .card');
-
-
-    gsap.fromTo(cards,
-        {
-            opacity: 0
-        }, {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: '.card-row',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            scrub: true,
-            once: true,
-        }
-    }
-    );
 
 });
