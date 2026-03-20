@@ -30,8 +30,26 @@ h4 {
     z-index: 2;
 }
 
-.language-section {
+.right-about {
     margin-top:50px;
+}
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* equal width columns */
+  gap: 40px; /* space between columns */
+  align-items: start;
+}
+.left-about,
+.right-about {
+  width: 100%;
+}
+
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .about-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero-img {
@@ -225,7 +243,7 @@ h4 {
 .language-card-row {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
