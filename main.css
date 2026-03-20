@@ -2,7 +2,8 @@
 
   .hero-container {
   position: relative;
-  height: 100vh;
+  height: 800px; 
+  width: 100%;
   overflow: hidden;
   }
 
@@ -18,15 +19,11 @@ h1 {
   z-index: 2;
 }
   .hero-img {
- position: absolute;
-
-    inset: 0;             
-  z-index: -1;   
-
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  overflow: hidden;
+  z-index: -1;
 }
 .parallax-img-container {
   width: 100%;
@@ -35,15 +32,10 @@ h1 {
 }
 
 .parallax-img {
-  position: absolute;
-  top: 0;
-    width: 100%;
-  height: 120%;         /* 🔥 slightly bigger for parallax movement */
-  object-fit: cover;
-  left: 0;
   width: 100%;
-  height: auto;
-  will-change: transform;
+  height: 100%;
+  object-fit: cover;   
+  display: block;
 }
 
 /* Ensure content appears above the background image */
