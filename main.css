@@ -191,6 +191,7 @@ p, li {
 
 .hero-text {
     color: #fff;
+    text-align:left;
 }
 
 .section.hero .container,
