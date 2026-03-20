@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     typeSubtitle();
-});
+
 
     //GSAP 
 
@@ -73,6 +73,7 @@ gsap.to(languageIcons, {
     ease: "power2.out",
     delay: 0.5 // optional: waits a bit after page load
 });
+
     //Project cards
 gsap.fromTo(
   ".projects-grid .project-card",
