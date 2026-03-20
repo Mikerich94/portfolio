@@ -98,6 +98,10 @@ p, li {
     z-index: 2;
 }
 
+@media (max-width:1350px) {
+    padding:0px 25px;
+}
+
 .about-row {
     margin-top:50px;
 }
@@ -118,8 +122,8 @@ p, li {
 
 
 /* Responsive: stack on smaller screens */
-@media (max-width: 768px) {
-  .about-row {
+@media (max-width: 992px) {
+  .about-row, .projects-grid {
     grid-template-columns: 1fr;
   }
 }
