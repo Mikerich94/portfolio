@@ -137,9 +137,11 @@ h4 {
     padding: 50px;
     max-width: 250px;
     background: white;
-    border-radius: 20px;
-    border: 1px solid black;
 }
+.card-row  svg {
+    max-width:50px;
+}
+
 .projects-grid .project-card {
  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
