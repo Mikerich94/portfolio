@@ -55,7 +55,7 @@ body {
 
 .section.hero {
     background: none !important;
-    padding-top: 0;
+    padding: 0;
     position: relative;
     height: 450px;
     width: 100%;
