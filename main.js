@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     //Project cards
-    gsap.fromTo(
+gsap.fromTo(
   ".projects-grid .project-card",
   { opacity: 0, y: 40 },
   {
@@ -102,9 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 0.6,
     stagger: 0.15,
     ease: "power2.out",
+    clearProps: "transform",  
     scrollTrigger: {
       trigger: ".projects-grid",
       start: "top 80%",
+      once: true,
     }
   }
 );
