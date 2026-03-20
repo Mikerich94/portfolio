@@ -313,6 +313,11 @@ h4 {
     /* Ensures the entire image fits without cropping */
 }
 
+.language-icon.html {
+    padding:5px;
+    box-sizing: border-box;
+}
+
 .language-title {
     text-align: center;
 }
