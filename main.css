@@ -418,6 +418,10 @@ p, li {
   
         height:fit-content;
     }
+.hero-buttons {
+    flex-wrap:wrap;
+}
+
 .language-icon {
     flex-basis:40%;
 }
