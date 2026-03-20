@@ -328,3 +328,26 @@ h4 {
 .linkedin-cta a:hover {
   text-decoration: underline;
 }
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;        /* centers the form */
+  display: flex;
+  flex-direction: column; /* stacks textarea above button */
+  gap: 16px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+  font-family: montserrat, sans-serif;
+  resize: vertical;
+  box-sizing: border-box; /* prevents textarea from overflowing */
+}
+
+.contact-form button {
+  align-self: center;    /* centers the button horizontally */
+}
