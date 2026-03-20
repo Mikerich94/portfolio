@@ -67,6 +67,14 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    font-size:40px;
+}
+
+h3 {
+    font-size:35px;
+}
+
 h1,
 h2,
 h3,
@@ -90,6 +98,10 @@ h4 {
   gap: 40px; /* space between columns */
   align-items: start;
 }
+.about-subtext {
+    font-size:22px;
+}
+
 .left-about,
 .right-about {
   width: 100%;
