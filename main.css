@@ -147,12 +147,17 @@ p, li {
         font-size: 16px;
         line-height: 150%; 
     }
+
+    .section.hero {
+        padding:30px 0;
+        height:fit-content;
+    }
 .language-icon {
     flex-basis:40%;
 }
 
     .section {
-        padding:30px 0;
+        padding:30px 0!important;
     }
     .section h2, .project-subtext, .contact-subtext, .language-title {
         text-align:left;    
