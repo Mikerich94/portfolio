@@ -36,14 +36,14 @@ typeTitle();
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".parallax-img", {
-yPercent: -60,   
-  scale: 1.2,      
+  yPercent: -40,  
+  scale: 1.15,
   ease: "none",
   scrollTrigger: {
     trigger: ".hero",
     start: "top top",
     end: "bottom top",
-    scrub: 1.5            
+    scrub: 1.5
   }
 });
             // GSAP animation for hero text 
