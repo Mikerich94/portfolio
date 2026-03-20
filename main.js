@@ -124,7 +124,12 @@ gsap.fromTo(
   }
 );
 
-
-
-
 });
+
+//Send Email with subject from bottom form
+function sendEmail() {
+  const message = document.getElementById("message").value;
+  const subject = "Portfolio website message";
+  const mailtoLink = `mailto:richardsmichael94@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+  window.location.href = mailtoLink;
+}
