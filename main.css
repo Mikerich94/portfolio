@@ -119,6 +119,9 @@ h4 {
     border-radius: 20px;
     border: 1px solid black;
 }
+.projects-grid .project-card {
+  opacity: 0;
+}
 
 .section.projects .two-col * {
     text-decoration: none;
