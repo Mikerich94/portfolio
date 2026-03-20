@@ -58,7 +58,7 @@ gsap.to(".parallax-img", {
             );
 
             // GSAP animation for hero image
-            gsap.fromTo('.hero-img', 
+            gsap.fromTo('.parallax-img-container', 
                 { opacity: 0, x: 200 }, 
                 { 
                     opacity: 1, 
