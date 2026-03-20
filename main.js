@@ -72,21 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    // GSAP animation for the language cards
-
- const languageIcons = document.querySelectorAll('.language-icon');
-
-// set initial state (optional but cleaner)
-gsap.set(languageIcons, { opacity: 0, y: 20 });
-
-gsap.to(languageIcons, {
-    opacity: 1,
-    y: 0,
-    duration: 0.5,
-    stagger: 0.2, // controls delay between each card
-    ease: "power2.out",
-    delay: 0.5 // optional: waits a bit after page load
-});
 
     //Project cards
 gsap.fromTo(
@@ -107,8 +92,10 @@ gsap.fromTo(
   }
 );
 
-    // About bullets
-    gsap.fromTo(
+    // About bullets and language icons
+const languageIcons = document.getElementsByClassName("language-icon");
+
+gsap.fromTo(
   ".section.about ul li",
   { opacity: 0, x: -30 },
   {
@@ -120,6 +107,17 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".section.about ul",
       start: "top 80%",
+    },
+    onComplete: function() {
+      // Icons animate only after bullets finish
+      gsap.set(languageIcons, { opacity: 0, y: 20 });
+      gsap.to(languageIcons, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
     }
   }
 );
