@@ -163,9 +163,10 @@ p, li {
 }
 
 .section.about ul li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
 }
 
 .section.hero .container {
