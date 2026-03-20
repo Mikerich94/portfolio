@@ -60,27 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // GSAP animation for the language cards
 
-    const languageCards = document.querySelectorAll('.language-card');
+ const languageIcons = document.querySelectorAll('.language-card');
 
+// set initial state (optional but cleaner)
+gsap.set(languageIcons, { opacity: 0, y: 20 });
 
-    gsap.fromTo(languageCards,
-        {
-            opacity: 0
-        }, {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: '.language-card-row',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            scrub: true,
-            once: true,
-        }
-    }
-    );
-
+gsap.to(languageIcons, {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    stagger: 0.2, // controls delay between each card
+    ease: "power2.out",
+    delay: 0.5 // optional: waits a bit after page load
+});
     //Project cards
 gsap.fromTo(
   ".projects-grid .project-card",

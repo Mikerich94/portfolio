@@ -240,20 +240,21 @@ h4 {
     text-align: center;
 }
 
-.language-card-row {
+.language-icon-row {
     display: flex;
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
 }
 
-.language-card {
+
+.language-icon {
     width: 75px;
     height: 75px;
     object-fit: contain;
     /* Ensures the entire image fits without cropping */
 }
 
-.language-card-title {
+.language-title {
     text-align: center;
 }
