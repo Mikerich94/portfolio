@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (j < subtitleText.length) {
             subtitleEl.textContent += subtitleText.charAt(j);
             j++;
-            setTimeout(typeSubtitle, 40);
+            setTimeout(typeSubtitle, 25);
         }
     }
 
