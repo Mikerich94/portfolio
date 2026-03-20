@@ -194,7 +194,6 @@ p, li {
     display: flex;
     align-items: center;
     height: 100%;
-    justify-content: center;
 }
 #subtitle {
   display: block;
@@ -203,7 +202,6 @@ p, li {
 .hero-text {
     color: #fff;
   width: 100%;
-  max-width: 800px;
     text-align:left;
 }
 
