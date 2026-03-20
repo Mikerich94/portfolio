@@ -26,7 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    typeSubtitle();
+    // Reserve space before typing to prevent layout shift on mobile
+    subtitleEl.style.visibility = "hidden";
+    subtitleEl.textContent = subtitleText;
+
+    setTimeout(() => {
+        subtitleEl.textContent = "";
+        subtitleEl.style.visibility = "visible";
+        typeSubtitle();
+    }, 100);
 
     function runAboutAnimations() {
         gsap.fromTo(
