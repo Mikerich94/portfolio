@@ -6,9 +6,16 @@ body {
     background:none!important;
     padding-top:0;
   position: relative;
-  height: 450px; 
   width: 100%;
   overflow: hidden;
+  }
+
+  .section.about {
+ position: relative;
+  height: 450px;  /* or whatever height you want */
+  overflow: hidden;
+  width: 100%;
+
   }
 
   

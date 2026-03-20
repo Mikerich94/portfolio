@@ -40,7 +40,7 @@ gsap.to(".parallax-img", {
   scale: 1.15,
   ease: "none",
   scrollTrigger: {
-    trigger: ".hero",
+    trigger: ".section.about",
     start: "top top",
     end: "bottom top",
     scrub: 1.2
