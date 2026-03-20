@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Register FIRST before anything else
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.normalizeScroll(false);
 
-    //Hero typing animation
     const subtitleText = "Intersecting modern design with high-performance, scalable web experiences.";
     const subtitleEl = document.getElementById("subtitle");
+    const languageIcons = document.getElementsByClassName("language-icon");
+
+    // Check if about-row is visible on page load
+    const aboutRow = document.querySelector(".about-row");
+    const aboutInView = aboutRow.getBoundingClientRect().top < window.innerHeight;
 
     let j = 0;
 
@@ -16,16 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
             j++;
             setTimeout(typeSubtitle, 25);
         } else {
-            // Typing done — kick off about animations
-            runAboutAnimations();
+            // Typing done — only run about animations if about-row is in viewport
+            if (aboutInView) {
+                runAboutAnimations();
+            }
         }
     }
 
     typeSubtitle();
 
     function runAboutAnimations() {
-        const languageIcons = document.getElementsByClassName("language-icon");
-
         gsap.fromTo(
             ".section.about ul li",
             { opacity: 0, x: -30 },
@@ -35,6 +38,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 duration: 0.5,
                 stagger: 0.15,
                 ease: "power2.out",
+                onComplete: function () {
+                    gsap.set(languageIcons, { opacity: 0, y: 20 });
+                    gsap.to(languageIcons, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.2,
+                        ease: "power2.out",
+                    });
+                }
+            }
+        );
+    }
+
+    // If about-row is NOT in view on load, use ScrollTrigger
+    if (!aboutInView) {
+        gsap.fromTo(
+            ".section.about ul li",
+            { opacity: 0, x: -30 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                stagger: 0.15,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".about-row",
+                    start: "top 80%",
+                    once: true,
+                },
                 onComplete: function () {
                     gsap.set(languageIcons, { opacity: 0, y: 20 });
                     gsap.to(languageIcons, {
@@ -97,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Send Email with subject from bottom form
 function sendEmail() {
     const message = document.getElementById("message").value;
     const subject = "Portfolio website message";
