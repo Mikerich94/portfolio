@@ -38,7 +38,18 @@ h1 {
   display: block;
 }
 
-/* Ensure content appears above the background image */
+
+.hero-container .container {
+        display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.hero-text {
+    color:#fff;
+}
+
 .hero-container .container,
 .hero-text {
   position: relative;
@@ -55,9 +66,7 @@ h1 {
         align-items: center;
     }
 
-    .hero-img img {
-        max-width: 500px;
-    }
+  
 
     .card-row {
         flex-wrap: wrap;
