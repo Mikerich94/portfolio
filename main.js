@@ -92,6 +92,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     );
 
+    //Project cards
+    gsap.fromTo(
+  ".projects-grid .project-card",
+  { opacity: 0, y: 40 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".projects-grid",
+      start: "top 80%",
+    }
+  }
+);
+
+    // About bullets
+    gsap.fromTo(
+  ".section.about ul li",
+  { opacity: 0, x: -30 },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 0.5,
+    stagger: 0.15,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".section.about ul",
+      start: "top 80%",
+    }
+  }
+);
+
 
     // GSAP animation for the focus cards
 
