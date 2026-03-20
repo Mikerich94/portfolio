@@ -1,6 +1,6 @@
 
 
-  .hero-wrappre {
+  .section.hero {
   position: relative;
   height: 800px; 
   width: 100%;
@@ -39,7 +39,7 @@ h1 {
 }
 
 
-.hero-wrapper .container {
+.section.hero .container {
         display: flex;
     align-items: center;
     height: 100%;
@@ -50,7 +50,7 @@ h1 {
     color:#fff;
 }
 
-.hero-wrapper .container,
+.section.hero .container, .section.hero
 .hero-text {
   position: relative;
   z-index: 2;
