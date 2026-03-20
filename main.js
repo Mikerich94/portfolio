@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // GSAP animation for the language cards
 
- const languageIcons = document.querySelectorAll('.language-card');
+ const languageIcons = document.querySelectorAll('.language-icon');
 
 // set initial state (optional but cleaner)
 gsap.set(languageIcons, { opacity: 0, y: 20 });
