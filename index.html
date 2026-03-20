@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="main-styles.css">
 
 <head>
+    <link rel="stylesheet" href="main.css">
+
   <!-- Include ScrollTrigger plugin for GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -19,8 +21,8 @@
   <div class="container">
     <div class="hero-row">
       <div class="hero-text">
-        <h1>Welcome to my portfolio site.</h1>
-        <h3>Here's where I will show off my coding projects.</h3>
+        <h1 id="title"></h1>
+        <h3 id="subtitle"></h3>
         <h4>LinkedIn section</h4>
       </div>
     </div>
@@ -127,202 +129,5 @@
         </div>
     </div>
 
-    <script>
-        
-        document.addEventListener("DOMContentLoaded", function () {
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".parallax-img", {
-  yPercent: 20, // or -20 to move up
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".hero-container",
-    start: "top bottom",   // when top of hero hits bottom of viewport
-    end: "bottom top",     // when bottom of hero hits top of viewport
-    scrub: true            // smooth scrub based on scroll position
-  }
-});
-            // GSAP animation for hero text 
-            gsap.fromTo('.hero-text', 
-                { opacity: 0, x: -200 }, 
-                { 
-                    opacity: 1, 
-                    x: 0, 
-                    duration: 1, 
-                    ease: "power2.out" 
-                }
-            );
-
-            // GSAP animation for hero image
-            gsap.fromTo('.hero-img', 
-                { opacity: 0, x: 200 }, 
-                { 
-                    opacity: 1, 
-                    x: 0,
-                    duration: 1,
-                    ease: "power2.out" 
-                }
-            );
-      
-
-            // GSAP animation for the language cards
-           
-            const languageCards = document.querySelectorAll('.language-card');
-
-            
-            gsap.fromTo(languageCards, 
-                { 
-                    opacity: 0 
-                }, { 
-                    opacity: 1,
-                    duration: 1,
-                    stagger: 0.3, 
-                    ease: "power1.out",
-                    scrollTrigger: {
-                        trigger: '.language-card-row', 
-                        start: 'top 80%',
-                        end: 'bottom 20%',
-                        scrub: true, 
-                        once: true, 
-                    }
-                }
-            );
-
-
-           // GSAP animation for the focus cards
-           
-           const cards = document.querySelectorAll('.card-row .card');
-
-            
-gsap.fromTo(cards, 
-    { 
-        opacity: 0 
-    }, { 
-        opacity: 1,
-        duration: 1,
-        stagger: 0.3, 
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: '.card-row', 
-            start: 'top 80%',
-            end: 'bottom 20%',
-            scrub: true, 
-            once: true, 
-        }
-    }
-);
-   
-});
-    </script>
-
+<script src="main.js"></script>
 </body>
-
-<style>
-
-  .hero-container {
-  position: relative;
-  overflow: hidden;
-  }
-
-  
-
-  .hero-img {
- position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;* adjust as needed */
-}
-.parallax-img-container {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.parallax-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  will-change: transform;
-}
-
-/* Ensure content appears above the background image */
-.hero-container .container,
-.hero-text {
-  position: relative;
-  z-index: 2;
-}
-    * {
-        font-family: montserrat, sans-serif;
-    }
-
-    .hero-row {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        align-items: center;
-    }
-
-    .hero-img img {
-        max-width: 500px;
-    }
-
-    .card-row {
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-    }
-
-    .card-row .card {
-        padding: 50px;
-        max-width: 250px;
-        background: white;
-        border-radius: 20px;
-        border: 1px solid black;
-    }
-
-    .two-col {
-        display: flex;
-        gap: 50px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .two-col img,
-    .two-col .description {
-        flex-basis: 50%;
-    }
-
-    .section {
-        padding: 75px 0;
-    }
-
-    .section:nth-child(odd) {
-        background: #FAF9F6;
-    }
-
-    .section:nth-child(even) {
-        background: #fff;
-    }
-    .language-card-row {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.language-card {
-    width: 75px;
-    height: 75px;
-    object-fit: contain; /* Ensures the entire image fits without cropping */
-}
-    .language-card-title {
-        text-align:center;
-    }
-</style>
