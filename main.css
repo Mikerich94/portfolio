@@ -2,6 +2,64 @@ body {
     margin: 0;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Base button */
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary button (Projects) */
+.btn.projects {
+  background: linear-gradient(135deg, #ff4d4d, #ff7a7a);
+  color: white;
+  box-shadow: 0 4px 20px rgba(255, 77, 77, 0.25);
+}
+
+.btn.projects:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 77, 77, 0.4);
+}
+
+/* Secondary button (About) */
+.btn.about {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn.about:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-2px);
+}
+
+/* Optional subtle "glow" hover effect */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
 .section.hero {
     background: none !important;
     padding-top: 0;
