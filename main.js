@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hero parallax
     gsap.to(".parallax-img", {
-        yPercent: -40,
-        scale: 1.15,
+        yPercent: -20,
+        scale: 1.05,
         ease: "none",
         scrollTrigger: {
             trigger: ".hero",
