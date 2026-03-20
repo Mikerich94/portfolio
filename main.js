@@ -19,8 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeSubtitle();
 
+    //hero buttons
+    gsap.fromTo(
+  ".hero-buttons .btn",
+  { opacity: 0, y: 20 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    ease: "power2.out",
+    delay: 1.5  // waits for the typing animation to get going first
+  }
+);
 
-    //GSAP 
+    //hero parallax 
 
     gsap.registerPlugin(ScrollTrigger);
 
