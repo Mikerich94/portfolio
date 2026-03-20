@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Register FIRST before anything else
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.normalizeScroll(false);
-    ScrollTrigger.disable();
 
     //Hero typing animation
     const subtitleText = "Intersecting modern design with high-performance, scalable web experiences.";
@@ -17,12 +16,38 @@ document.addEventListener("DOMContentLoaded", function () {
             j++;
             setTimeout(typeSubtitle, 25);
         } else {
-            // Typing done — now enable scroll animations
-            ScrollTrigger.enable();
+            // Typing done — kick off about animations
+            runAboutAnimations();
         }
     }
 
     typeSubtitle();
+
+    function runAboutAnimations() {
+        const languageIcons = document.getElementsByClassName("language-icon");
+
+        gsap.fromTo(
+            ".section.about ul li",
+            { opacity: 0, x: -30 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 0.5,
+                stagger: 0.15,
+                ease: "power2.out",
+                onComplete: function () {
+                    gsap.set(languageIcons, { opacity: 0, y: 20 });
+                    gsap.to(languageIcons, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.5,
+                        stagger: 0.2,
+                        ease: "power2.out",
+                    });
+                }
+            }
+        );
+    }
 
     // Hero buttons
     gsap.fromTo(
@@ -66,36 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 trigger: ".projects-grid",
                 start: "top 80%",
                 once: true,
-            }
-        }
-    );
-
-    // About bullets and language icons
-    const languageIcons = document.getElementsByClassName("language-icon");
-
-    gsap.fromTo(
-        ".section.about ul li",
-        { opacity: 0, x: -30 },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 0.5,
-            stagger: 0.15,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: ".section.about ul",
-                start: "top 80%",
-            },
-            onComplete: function () {
-                // Icons animate only after bullets finish
-                gsap.set(languageIcons, { opacity: 0, y: 20 });
-                gsap.to(languageIcons, {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.5,
-                    stagger: 0.2,
-                    ease: "power2.out",
-                });
             }
         }
     );
