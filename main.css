@@ -75,6 +75,7 @@ h3 {
     font-size:35px;
 }
 
+
 h1,
 h2,
 h3,
@@ -214,6 +215,7 @@ p {
 .projects-grid .project-card {
  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
+  background:#fff;
 }
 
 
