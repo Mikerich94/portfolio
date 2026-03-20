@@ -8,13 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let j = 0;
 
-    function typeSubtitle() {
-        if (j < subtitleText.length) {
-            subtitleEl.textContent += subtitleText.charAt(j);
-            j++;
-            setTimeout(typeSubtitle, 25);
-        }
+  // Disable ScrollTrigger initially
+ScrollTrigger.disable();
+
+function typeSubtitle() {
+    if (j < subtitleText.length) {
+        subtitleEl.textContent += subtitleText.charAt(j);
+        j++;
+        setTimeout(typeSubtitle, 25);
+    } else {
+        // Typing done — now enable scroll animations
+        ScrollTrigger.enable();
     }
+}
 
 
     typeSubtitle();
@@ -49,28 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             scrub: 1.2
         }
     });
-    // GSAP animation for hero text 
-    gsap.fromTo('.hero-text',
-        { opacity: 0, x: -200 },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: "power2.out"
-        }
-    );
-
-    // GSAP animation for hero image
-    gsap.fromTo('.hero-img',
-        { opacity: 0, x: 200 },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: "power2.out"
-        }
-    );
-
+   
 
 
     //Project cards
