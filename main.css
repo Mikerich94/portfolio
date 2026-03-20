@@ -11,7 +11,9 @@ body {
   gap: 16px;
   margin-top: 20px;
 }
-
+.hero-buttons a {
+    text-decoration:none;
+}
 /* Base button */
 .btn {
   padding: 12px 22px;
