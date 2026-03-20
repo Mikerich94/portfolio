@@ -39,7 +39,7 @@ gsap.to(".parallax-img", {
   yPercent: 80, 
   ease: "none",
   scrollTrigger: {
-    trigger: ".hero-wrapper",
+    trigger: ".hero",
     start: "top bottom",   // when top of hero hits bottom of viewport
     end: "bottom top",     // when bottom of hero hits top of viewport
     scrub: true           
