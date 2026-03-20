@@ -443,4 +443,7 @@ p, li {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+      #subtitle {
+    min-height: 4.5em;  /* accounts for text wrapping to 3 lines on mobile */
+  }
 }
