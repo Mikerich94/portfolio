@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     //Hero typing animation
     const titleText = "Mike Richards, web developer";
-    const subtitleText = "Intersecting modern design with....";
+    const subtitleText = "Intersecting modern design with high-performance front-end development and scalable web experiences.";
 
     const titleEl = document.getElementById("title");
     const subtitleEl = document.getElementById("subtitle");
