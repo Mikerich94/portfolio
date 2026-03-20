@@ -199,11 +199,11 @@ p, li {
 #subtitle {
   display: block;
    min-height: 1.5em;
-  min-width: max-content;
 }
 .hero-text {
     color: #fff;
-    width:100%;
+  width: 100%;
+  max-width: 800px;
     text-align:left;
 }
 
