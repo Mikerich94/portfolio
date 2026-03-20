@@ -85,7 +85,7 @@ h4 {
     margin-top: 0;
 }
 
-p {
+p, li {
     font-size:20px;
     line-height:140%;
 }
