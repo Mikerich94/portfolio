@@ -346,12 +346,17 @@ p, li {
     width: 75px;
     height: 75px;
     object-fit: contain;
-    /* Ensures the entire image fits without cropping */
+   opacity:0;
 }
 
 .language-icon.html {
     padding:5px;
     box-sizing: border-box;
+}
+
+.language-icon.php {
+    box-sizing: border-box;
+    padding: 0 0 8px 0;
 }
 
 .language-title {
