@@ -221,15 +221,15 @@ p, li {
     text-align:center;
 }
 
-.section.websites .two-col * {
+.section.projects .two-col * {
     text-decoration: none;
 }
 
-.section.websites .two-col h3 {
+.section.projects .two-col h3 {
     cursor: pointer;
 }
 
-.section.websites .two-col h3:hover {
+.section.projects .two-col h3:hover {
     text-decoration: underline;
 }
 
