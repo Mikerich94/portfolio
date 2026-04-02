@@ -1,236 +1,321 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Mike Richards | Web Developer Portfolio">
-    <meta property="og:description"
-        content="Front-end web developer with 4 years of experience building responsive websites and interactive experiences.">
-    <meta property="og:url" content="https://mikerich94.github.io/portfolio/">
-    <meta property="og:type" content="website">
-    <title>Mike Richards | Web Developer Portfolio </title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Web_Development_Logo.png?raw=true">
-    <!-- Include ScrollTrigger plugin for GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Mike Richards | Web Developer Portfolio" />
+  <meta
+    property="og:description"
+    content="Front-end web developer with 4 years of experience building responsive websites and interactive experiences."
+  />
+  <meta property="og:url" content="https://mikerich94.github.io/portfolio/" />
+  <meta property="og:type" content="website" />
+  <title>Mike Richards | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="main.css" />
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Web_Development_Logo.png?raw=true"
+  />
+  <!-- Include ScrollTrigger plugin for GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-    <div class="section hero">
-        <div class="hero-img">
-            <div class="parallax-img-container">
-                <img class="parallax-img"
-                    src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/image-from-rawpixel-id-17622977-jpeg.webp?raw=true" />
-            </div>
-        </div>
-        <div class="container">
-            <div class="hero-row">
-                <div class="hero-text">
-                    <h1 id="title">Mike Richards, web developer</h1>
-                    <h3 id="subtitle"></h3>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn about">Learn about me</a>
-                        <a href="#projects" class="btn projects">See my projects</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="section hero">
+    <div class="hero-img">
+      <div class="parallax-img-container">
+        <img
+          class="parallax-img"
+          src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/image-from-rawpixel-id-17622977-jpeg.webp?raw=true"
+        />
+      </div>
     </div>
-
-    <div class="section about" id="about">
-        <div class="container">
-            <h2> About Me</h2>
-            <p class="about-subtext">
-                As a front-end web developer with four years of experience, I build responsive websites and engaging
-                user interfaces, with a focus on clean, scalable components and smooth animations. I’ve worked
-                extensively with marketing clients, creating custom modules, landing pages, emails, and full themes that
-                align with business goals and drive conversions.
-            </p>
-            <p class="about-subtext">
-                Key priorities include optimizing page speed, designing mobile-first, and ensuring every build is fully
-                responsive. I’m actively expanding my experience with React, Node.js, and TypeScript to broaden my
-                full-stack capabilities.
-            </p>
-            <div class="about-row">
-                <div class="left-about">
-                    <h3>Platforms & Tools </h3>
-                    <ul>
-                        <li>Hubspot</li>
-                        <li>WordPress (Gutenberg, Divi, Elementor)</li>
-                        <li>Salesforce Marketing Cloud</li>
-                        <li>Pardot</li>
-                        <li>Webflow</li>
-                        <li>Expression Engine</li>
-                        <li>Vercel</li>
-                        <li>GitHub</li>
-
-                    </ul>
-                </div>
-
-                <div class="right-about">
-                    <h3 class="language-title">Language specialization:</h3>
-                    <div class="language-icon-row">
-                        <img class="language-icon html"
-                            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/html.webp?raw=true"
-                            alt="HTML icon">
-                        <img class="language-icon"
-                            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/css-icon.webp?raw=true"
-                            alt="CSS icon">
-                        <img class="language-icon"
-                            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/javascript-icon.webp?raw=true"
-                            alt="JavaScript icon">
-                        <img class="language-icon php"
-                            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/php-icon.webp?raw=true"
-                            alt="PHP icon">
-                    </div>
-                </div>
-            </div>
-
+    <div class="container">
+      <div class="hero-row">
+        <div class="hero-text">
+          <h1 id="title">Mike Richards, web developer</h1>
+          <h3 id="subtitle"></h3>
+          <div class="hero-buttons">
+            <a href="#about" class="btn about">Learn about me</a>
+            <a href="#projects" class="btn projects">See my projects</a>
+          </div>
         </div>
-    </div>
-    <div class="section projects" id="projects">
-        <div class="container">
-            <h2>Independent Projects</h2>
-            <p class="project-subtext">Check out apps I've built using React, Node.js, Next.js, and TypeScript to expand my
-                fullstack capabilities!</p>
-            <div class="projects-grid">
-          <a href="https://notes-app-ashy-six-66.vercel.app/" class="project-card">
-  <div class="card-image-wrapper">
-    <img src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Notes%20App.webp?raw=true" alt="Notes App">
-    <div class="tech-tags">
-      <span class="tag">React</span>
-      <span class="tag">TypeScript</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Express</span>
-      <span class="tag">PostgreSQL</span>
-      <span class="tag">Prisma</span>
+      </div>
     </div>
   </div>
-  <div class="description">
-    <h3>Fullstack Notes App</h3>
-    <p>Built a dynamic frontend with React and TypeScript allowing users to add, edit, and delete
-        notes, managing state and UI interactions with useState and useEffect.</p>
-    <p>Developed a Node.js/Express backend with TypeScript, exposing RESTful APIs connected to a
-        PostgreSQL database via Prisma, ensuring type-safe, scalable, and reliable data operations.</p>
+
+  <div class="section about" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="about-subtext">
+        As a front-end web developer with four years of experience, I build
+        responsive websites and engaging user interfaces, with a focus on clean,
+        scalable components and smooth animations. I’ve worked extensively with
+        marketing clients, creating custom modules, landing pages, emails, and
+        full themes that align with business goals and drive conversions.
+      </p>
+      <p class="about-subtext">
+        Key priorities include optimizing page speed, designing mobile-first,
+        and ensuring every build is fully responsive. I’m actively expanding my
+        experience with React, Node.js, and TypeScript to broaden my full-stack
+        capabilities.
+      </p>
+      <div class="about-row">
+        <div class="left-about">
+          <h3>Platforms & Tools</h3>
+          <ul>
+            <li>Hubspot</li>
+            <li>WordPress (Gutenberg, Divi, Elementor)</li>
+            <li>Salesforce Marketing Cloud</li>
+            <li>Pardot</li>
+            <li>Webflow</li>
+            <li>Expression Engine</li>
+            <li>Vercel</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+
+        <div class="right-about">
+          <h3 class="language-title">Language specialization:</h3>
+          <div class="language-icon-row">
+            <img
+              class="language-icon html"
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/html.webp?raw=true"
+              alt="HTML icon"
+            />
+            <img
+              class="language-icon"
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/css-icon.webp?raw=true"
+              alt="CSS icon"
+            />
+            <img
+              class="language-icon"
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/javascript-icon.webp?raw=true"
+              alt="JavaScript icon"
+            />
+            <img
+              class="language-icon php"
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/php-icon.webp?raw=true"
+              alt="PHP icon"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</a>
-                <a href="https://mikes-recipes-ten.vercel.app/" class="project-card">
-                    <img
-                        src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Recipe%20Site.webp?raw=true">
-                    <div class="description">
-                        <h3>Recipe App</h3>
-                          <strong>Tech stack:</strong><p>Next.js, Contentful, JavaScript</p>
-                        <p>Built a recipe web application using Next.js and Contentful (headless CMS), leveraging static site generation and incremental static regeneration for performant, SEO-friendly pages. Implemented dynamic routing, reusable components, and rich text rendering, along with optimized image handling using Next.js Image.
-                        </p>
-                    
-                    </div>
-                </a>
-                <a href="https://wordle-react-app-zeta.vercel.app/" class="project-card">
-                    <img
-                        src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Wordle.webp?raw=true">
-                    <div class="description">
-                        <h3>Wordle App</h3>
-                           <strong>Tech stack:</strong><p>React, TypeScript, Node.js, Express</p>
-                        <p>Developed a Wordle-style word game with dynamic word generation and guess validation.
-
-</p>
-                        <p>Implemented frontend state management with React hooks and TypeScript.</p>
-                        
-                    </div>
-                </a>
+  <div class="section projects" id="projects">
+    <div class="container">
+      <h2>Independent Projects</h2>
+      <p class="project-subtext">
+        Check out apps I've built using React, Node.js, Next.js, and TypeScript
+        to expand my fullstack capabilities!
+      </p>
+      <div class="projects-grid">
+        <a
+          href="https://notes-app-ashy-six-66.vercel.app/"
+          class="project-card"
+        >
+          <div class="card-image-wrapper">
+            <img
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Notes%20App.webp?raw=true"
+              alt="Notes App"
+            />
+            <div class="tech-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma</span>
             </div>
-        </div>
-    </div>
-    <div class="section websites" id="websites">
-        <div class="container">
-            <h2>Websites</h2>
-            <p class="project-subtext">Feel free to click through to explore websites I've developed!</p>
-            <div class="projects-grid">
-
-                <a href="https://roboworx.io/" class="project-card">
-                    <img src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Roboworx.webp?raw=true">
-                    <div class="description">
-                        <h3>Roboworx</h3>
-                        <p>Roboworx was looking to transform their website to have a modern brand that spoke to
-                            their
-                            service offerings.</p>
-                    </div>
-                </a>
-                <a href="     https://musicwill.org/" class="project-card">
-                    <img
-                        src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Music%20Will.webp?raw=true">
-                    <div class="description">
-                        <h3>Music Will</h3>
-                        <p>Music Will wanted to overhaul their brand and update their site to look modern and fresh.
-                        </p>
-                    </div>
-                </a>
-
-
-                <a href="https://sparksgroupinc.com/" class="project-card">
-                    <img
-                        src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/sparks%20gorup.webp?raw=true">
-                    <div class="description">
-                        <h3>Sparks Group</h3>
-                        <p>Sparks Group needed a way to filter job seekers and employers coming to the site. I
-                            updated
-                            their hero to have 2 "sides" with animations for each lead type, directing users to AI
-                            chat
-                            bots designed for their needs.</p>
-                    </div>
-                </a>
-
-                <a href="https://mininghalloffame.org/" class="project-card">
-                    <img src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Mining.webp?raw=true">
-                    <div class="description">
-                        <h3>National Mining Hall of Fame and Museum</h3>
-                        <p>The Mining Museum's website was outdated and they were looking for a way to better
-                            highlight
-                            their exhibits and entice people to visit.</p>
-                    </div>
-                </a>
-
-                <a href="https://kamivision.com/en-us" class="project-card">
-                    <img src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/KamiVision.webp?raw=true">
-                    <div class="description">
-                        <h3>KamiVision</h3>
-                        <p>KamiVision wanted a new website design to modernize their brand. I built new animations
-                            and
-                            modules to better appeal to potential customers.</p>
-                    </div>
-                </a>
-
-                <a href="https://sitexsolutions.com/" class="project-card">
-                    <img src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/sitex.webp?raw=true">
-                    <div class="description">
-                        <h3>SITEX</h3>
-                        <p>SITEX wanted to improve their website over time with modules designed to better highlight
-                            their service offerings and distill information to their target audience. </p>
-                    </div>
-                </a>
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="section contact" id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p class="contact-subtext">Interested in working with me? Send me an email and we can connect!</p>
-            <div class="contact-form">
-                <textarea id="message" placeholder="Your message..." rows="6"></textarea>
-                <button class="btn projects" onclick="sendEmail()">Open in Email</button>
-            </div>
-            <p class="linkedin-cta">
-                Or connect with me on
-                <a href="https://www.linkedin.com/in/mike-richards-2881a283/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="description">
+            <h3>Fullstack Notes App</h3>
+            <p>
+              Built a dynamic frontend with React and TypeScript allowing users
+              to add, edit, and delete notes, managing state and UI interactions
+              with useState and useEffect.
             </p>
-        </div>
-    </div>
+            <p>
+              Developed a Node.js/Express backend with TypeScript, exposing
+              RESTful APIs connected to a PostgreSQL database via Prisma,
+              ensuring type-safe, scalable, and reliable data operations.
+            </p>
+          </div>
+        </a>
+        <a href="https://mikes-recipes-ten.vercel.app/" class="project-card">
+          <div class="card-image-wrapper">
+            <img
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Recipe%20Site.webp?raw=true"
+              alt="Recipe App"
+            />
+            <div class="tech-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Contentful</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Recipe App</h3>
+            <p>
+              Built a recipe web application using Next.js and Contentful
+              (headless CMS), leveraging static site generation and incremental
+              static regeneration for performant, SEO-friendly pages.
+              Implemented dynamic routing, reusable components, and rich text
+              rendering, along with optimized image handling using Next.js
+              Image.
+            </p>
+          </div>
+        </a>
 
-    <script src="main.js"></script>
+        <a
+          href="https://wordle-react-app-zeta.vercel.app/"
+          class="project-card"
+        >
+          <div class="card-image-wrapper">
+            <img
+              src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Wordle.webp?raw=true"
+              alt="Wordle App"
+            />
+            <div class="tech-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+            </div>
+          </div>
+          <div class="description">
+            <h3>Wordle App</h3>
+            <p>
+              Developed a Wordle-style word game with dynamic word generation
+              and guess validation.
+            </p>
+            <p>
+              Implemented frontend state management with React hooks and
+              TypeScript.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="section websites" id="websites">
+    <div class="container">
+      <h2>Websites</h2>
+      <p class="project-subtext">
+        Feel free to click through to explore websites I've developed!
+      </p>
+      <div class="projects-grid">
+        <a href="https://roboworx.io/" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Roboworx.webp?raw=true"
+          />
+          <div class="description">
+            <h3>Roboworx</h3>
+            <p>
+              Roboworx was looking to transform their website to have a modern
+              brand that spoke to their service offerings.
+            </p>
+          </div>
+        </a>
+        <a href="     https://musicwill.org/" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Music%20Will.webp?raw=true"
+          />
+          <div class="description">
+            <h3>Music Will</h3>
+            <p>
+              Music Will wanted to overhaul their brand and update their site to
+              look modern and fresh.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://sparksgroupinc.com/" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/sparks%20gorup.webp?raw=true"
+          />
+          <div class="description">
+            <h3>Sparks Group</h3>
+            <p>
+              Sparks Group needed a way to filter job seekers and employers
+              coming to the site. I updated their hero to have 2 "sides" with
+              animations for each lead type, directing users to AI chat bots
+              designed for their needs.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://mininghalloffame.org/" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/Mining.webp?raw=true"
+          />
+          <div class="description">
+            <h3>National Mining Hall of Fame and Museum</h3>
+            <p>
+              The Mining Museum's website was outdated and they were looking for
+              a way to better highlight their exhibits and entice people to
+              visit.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://kamivision.com/en-us" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/KamiVision.webp?raw=true"
+          />
+          <div class="description">
+            <h3>KamiVision</h3>
+            <p>
+              KamiVision wanted a new website design to modernize their brand. I
+              built new animations and modules to better appeal to potential
+              customers.
+            </p>
+          </div>
+        </a>
+
+        <a href="https://sitexsolutions.com/" class="project-card">
+          <img
+            src="https://github.com/Mikerich94/portfolio/blob/main/public/Images/sitex.webp?raw=true"
+          />
+          <div class="description">
+            <h3>SITEX</h3>
+            <p>
+              SITEX wanted to improve their website over time with modules
+              designed to better highlight their service offerings and distill
+              information to their target audience.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p class="contact-subtext">
+        Interested in working with me? Send me an email and we can connect!
+      </p>
+      <div class="contact-form">
+        <textarea
+          id="message"
+          placeholder="Your message..."
+          rows="6"
+        ></textarea>
+        <button class="btn projects" onclick="sendEmail()">
+          Open in Email
+        </button>
+      </div>
+      <p class="linkedin-cta">
+        Or connect with me on
+        <a
+          href="https://www.linkedin.com/in/mike-richards-2881a283/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
