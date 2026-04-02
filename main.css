@@ -253,6 +253,7 @@ p, li {
     transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
+
 .section.hero::after {
   content: "";
   position: absolute;
@@ -276,7 +277,7 @@ p, li {
     font-size:25px;
 }
 
-.project-card p {
+.project-card p, .project-card strong {
     color: #555;
     line-height: 1.6;
 }
