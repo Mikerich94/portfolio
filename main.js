@@ -140,8 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
           gsap.to(tags, {
             opacity: 1,
             y: 0,
-            duration: 0.25,
-            stagger: 0.08,
+            duration: 0.55,
+            stagger: 0.12,
             ease: "power2.out",
             delay: i * 0.15, // offsets each card's tags to match the stagger of the cards
           });
