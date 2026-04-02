@@ -119,24 +119,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Project cards
     gsap.fromTo(
-        ".projects-grid .project-card",
-        { opacity: 0, y: 40 },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: "power2.out",
-            clearProps: "transform",
-            scrollTrigger: {
-                trigger: ".projects-grid",
-                start: "top 80%",
-                once: true,
-            }
+    ".projects-grid .project-card",
+    { opacity: 0, y: 40 },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: "power2.out",
+        clearProps: "transform",
+        scrollTrigger: {
+            trigger: ".projects-grid",
+            start: "top 80%",
+            once: true,
+        },
+        onComplete: function () {
+            gsap.utils.toArray(".project-card").forEach((card, i) => {
+                const tags = card.querySelectorAll(".tag");
+                gsap.set(tags, { opacity: 0, y: 8 });
+                gsap.to(tags, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.25,
+                    stagger: 0.08,
+                    ease: "power2.out",
+                    delay: i * 0.15  // offsets each card's tags to match the stagger of the cards
+                });
+            });
         }
-    );
-
-});
+    }
+);
 
 function sendEmail() {
     const message = document.getElementById("message").value;
