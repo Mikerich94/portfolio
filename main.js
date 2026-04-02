@@ -134,16 +134,19 @@ document.addEventListener("DOMContentLoaded", function () {
         once: true,
       },
       onComplete: function () {
-        gsap.utils.toArray(".project-card").forEach((card, i) => {
+        const cards = gsap.utils.toArray(".project-card");
+        const tl = gsap.timeline();
+
+        cards.forEach((card) => {
           const tags = card.querySelectorAll(".tag");
           gsap.set(tags, { opacity: 0, y: 8 });
-          gsap.to(tags, {
+
+          tl.to(tags, {
             opacity: 1,
             y: 0,
-            duration: 0.55,
-            stagger: 0.12,
+            duration: 0.25,
+            stagger: 0.08,
             ease: "power2.out",
-            delay: i * 0.15, // offsets each card's tags to match the stagger of the cards
           });
         });
       },
